@@ -18,6 +18,10 @@
   make modules_install  //安装编译得到的内核模块到/lib/modules/中
   
   make install          //重命名、安装bzImage, System.map，更改相应配置(boot/grub/grub.conf)
-  
+                        问题：ERROR: modinfo: could not find module vmware_balloon。找不到 vmware_balloon 模块，
+                              首先，确认你的 .config 文件里面有  CONFIG_VMWARE_BALLOON=m 这一行，
+                              其次，而这个模块在后面的版本中，已经更名为 vmw_balloon，所以 可以用下面的命令来解决：
+                                  cd /lib/modules/3.x.xx/kernel/drivers/misc #将版本号改成你自己的
+                                  ln -s vmw_balloon.ko vmware_balloon.ko #建立软连接
   
 
