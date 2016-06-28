@@ -23,5 +23,6 @@
                               其次，而这个模块在后面的版本中，已经更名为 vmw_balloon，所以 可以用下面的命令来解决：
                                   cd /lib/modules/3.x.xx/kernel/drivers/misc #将版本号改成你自己的
                                   ln -s vmw_balloon.ko vmware_balloon.ko #建立软连接
-  
+
+第四步、重启使用方向键选择启动内核  
 
