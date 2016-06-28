@@ -1,0 +1,9 @@
+1. .config文件相关：
+  make oldconfig    : 基于已有的.config进行配置, 若有新的符号, 它将询问用户.（源码根目录中有.config文件，可以是从其他地方拷贝过来的）
+  make defconfig    : 按默认选项对内核进行配置(386的默认配置是Linus做的)
+  make allnoconfig  : 除必须的选项外, 其它选项一律不选. (常用于嵌入式系统).
+  make clean        : 删除生成的目标文件, 往往用它来实现对驱动的重新编译.
+  make mrproper     : 删除包括.config在内的生成的目标文件. 
+  make menuconfig   :
+  
+  一般应该是使用make oldconfig较多（从系统中的cp /boot/config-2.6.32-573.el6.x86_64 目标源码根目录/.config）
